@@ -42,7 +42,7 @@ If you find our code useful for your research, please consider citing:
 ## Quantized LLaMA-7B Models
 The results reported in the paper is run with the internal LLaMA codebase in Meta. We reproduced our experiments with huggingface codebase and released code here. The results are close to those in the paper. For clearity, we list the zero-shot common sense reasoning accuracy of the opensourced version in the following table.
 
-| #bits | boolq | piqa | siqa | hellaswag | winogrande_1.1 | arc_easy | arc_challenge | obqa | avg. |
+| #bits (W-A-KV) | boolq | piqa | siqa | hellaswag | winogrande | arc_easy | arc_challenge | obqa | avg. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 4-8-4   | 72.4 | 76.9 | 47.6 | 70.5 | 65.8 | 67.5 | 44.4 | 50.4 | 62.0 |
 | 4-8-8   | 73.6 | 77.4 | 48.5 | 73.0 | 68.8 | 68.4 | 45.5 | 53.4 | 63.6 |
