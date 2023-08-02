@@ -1,5 +1,5 @@
 transformers==4.30.1
-acclerate==0.20.3
+accelerate==0.20.3
 datasets==2.12.0
 sentencepiece
 fairscale
