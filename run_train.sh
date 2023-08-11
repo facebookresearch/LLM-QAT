@@ -38,6 +38,6 @@ torchrun --nproc_per_node=8 --master_port=15001 train.py \
 --w_bits $1 \
 --a_bits $2 \
 --kv_bits $3 \
---use_kd False \
+--use_kd True \
 --fsdp "full_shard auto_wrap" \
 --fsdp_transformer_layer_cls_to_wrap 'LlamaDecoderLayer'

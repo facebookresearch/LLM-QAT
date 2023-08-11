@@ -97,7 +97,12 @@ def train():
     )
     log.info("Complete tokenizer loading...")
 
-    dataset = load_dataset("wikitext", 'wikitext-2-v1')
+    train_dataset, valid_dataset = datautils.get_train_val_dataset(
+        train_path=data_args.train_data_local_path,
+        valid_path=data_args.eval_data_local_path
+        if data_args.eval_data_local_path is not None
+        else None,
+    )
     train_data = datautils.CustomJsonDataset(
         dataset['train'], tokenizer, block_size=training_args.model_max_length
     )

@@ -172,13 +172,11 @@ class QuantizeLinear(nn.Linear):
         a_bits=32,
         act_layerwise=False,
         weight_layerwise=False,
-        smoothquant=False,
     ):
         super(QuantizeLinear, self).__init__(*kargs, bias=False)
         self.w_bits = w_bits
         self.a_bits = a_bits
         self.act_layerwise = act_layerwise
-        self.smoothquant = smoothquant
         self.weight_layerwise = weight_layerwise
         # params for weight quant
         # if self.w_bits < 32:
@@ -193,17 +191,6 @@ class QuantizeLinear(nn.Linear):
         # quantize weight
         assert len(self.weight.size()) == 2
         real_weights = self.weight
-
-        if self.smoothquant:
-            max_input = (
-                torch.max(torch.abs(input_), dim=-2, keepdim=True)[0].detach().mean(0)
-            )
-            max_weight = torch.max(torch.abs(self.weight), dim=-2, keepdim=True)[
-                0
-            ].detach()
-            scale = torch.sqrt(max_input * max_weight)
-            input_ = input_ * scale / (max_input + 1e-6)
-            real_weights = self.weight * scale / (max_weight + 1e-6)
 
         if self.w_bits >= 32:
             weight = self.weight
