@@ -7,7 +7,7 @@ This repository contains the training code of LLM-QAT introduced in our work: "[
 In this work, we investigate quantization-aware training for LLMs (LLM-QAT). In addition to quantizing weights and activations, we also quantize the KV cache, which is critical for increasing throughput and support long sequence dependencies at current model sizes. We experiment with LLaMA models of sizes 7B, 13B, and 30B, at quantization levels down to 4-bits. We observe up to ~20 points improvement over training-free methods when quantizing weight, activations and kv cache to 4-bit, 8-bit and 4-bit, respectively.
 
 <div align=center>
-<img width=80% src="https://github.com/zxdmike/llm-qat/blob/main/llm_qat_overview.jpg"/>
+<img width=80% src="./llm_qat_overview.jpg">
 </div>
 
 
