@@ -69,6 +69,7 @@ def train():
             low_cpu_mem_usage=True,
             device_map=None if len(training_args.fsdp) > 0 else "auto",
         )
+    model.cuda()
     if training_args.use_kd:
         teacher_model = transformers.AutoModelForCausalLM.from_pretrained(
             pretrained_model_name_or_path=model_args.input_model_filename,
