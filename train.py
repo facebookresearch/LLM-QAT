@@ -52,7 +52,6 @@ def train():
         student_config.w_bits = model_args.w_bits
         student_config.a_bits = model_args.a_bits
         student_config.kv_bits = model_args.kv_bits
-        student_config.smoothquant = model_args.smoothquant
         model = LlamaForCausalLMQuant.from_pretrained(
             pretrained_model_name_or_path=model_args.input_model_filename,
             config=student_config,

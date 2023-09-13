@@ -206,7 +206,6 @@ class LlamaMLP(nn.Module):
     ):
         self.w_bits = config.w_bits
         self.a_bits = config.a_bits
-        self.smoothquant = config.smoothquant
         super().__init__()
         self.gate_proj = QuantizeLinear(
             hidden_size,
@@ -214,7 +213,6 @@ class LlamaMLP(nn.Module):
             bias=False,
             w_bits=self.w_bits,
             a_bits=self.a_bits,
-            smoothquant=self.smoothquant,
         )
         self.down_proj = QuantizeLinear(
             intermediate_size,
@@ -222,7 +220,6 @@ class LlamaMLP(nn.Module):
             bias=False,
             w_bits=self.w_bits,
             a_bits=self.a_bits,
-            smoothquant=self.smoothquant,
         )
         self.up_proj = QuantizeLinear(
             hidden_size,
@@ -230,7 +227,6 @@ class LlamaMLP(nn.Module):
             bias=False,
             w_bits=self.w_bits,
             a_bits=self.a_bits,
-            smoothquant=self.smoothquant,
         )
 
         self.act_fn = ACT2FN[hidden_act]
@@ -251,7 +247,6 @@ class LlamaAttention(nn.Module):
         self.max_position_embeddings = config.max_position_embeddings
         self.w_bits = config.w_bits
         self.a_bits = config.a_bits
-        self.smoothquant = config.smoothquant
 
         self.act_clip_val_k = torch.tensor([-2.0, 2.0])
         self.act_clip_val_v = torch.tensor([-2.0, 2.0])
@@ -270,7 +265,6 @@ class LlamaAttention(nn.Module):
             bias=False,
             w_bits=self.w_bits,
             a_bits=self.a_bits,
-            smoothquant=self.smoothquant,
         )
         self.k_proj = QuantizeLinear(
             self.hidden_size,
@@ -278,7 +272,6 @@ class LlamaAttention(nn.Module):
             bias=False,
             w_bits=self.w_bits,
             a_bits=self.a_bits,
-            smoothquant=self.smoothquant,
         )
         self.v_proj = QuantizeLinear(
             self.hidden_size,
@@ -286,7 +279,6 @@ class LlamaAttention(nn.Module):
             bias=False,
             w_bits=self.w_bits,
             a_bits=self.a_bits,
-            smoothquant=self.smoothquant,
         )
         self.o_proj = QuantizeLinear(
             self.num_heads * self.head_dim,
@@ -294,7 +286,6 @@ class LlamaAttention(nn.Module):
             bias=False,
             w_bits=self.w_bits,
             a_bits=self.a_bits,
-            smoothquant=self.smoothquant,
         )
         self.rotary_emb = LlamaRotaryEmbedding(
             self.head_dim, max_position_embeddings=self.max_position_embeddings

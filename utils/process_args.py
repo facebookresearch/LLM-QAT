@@ -40,10 +40,6 @@ class ModelArguments:
         default=32,
         metadata={"help": "KV_cache quantization bits."},
     )
-    smoothquant: Optional[bool] = field(
-        default=False,
-        metadata={"help": "Whether to apply smooth quantization."},
-    )
 
 
 @dataclass
