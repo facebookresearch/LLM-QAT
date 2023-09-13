@@ -33,7 +33,7 @@ torchrun --nproc_per_node=8 --master_port=15001 train.py \
 --lr_scheduler_type "cosine" \
 --logging_steps 1 \
 --tf32 False \
---gradient_checkpointing False \
+--gradient_checkpointing True \
 --qat True \
 --w_bits $1 \
 --a_bits $2 \
