@@ -14,14 +14,24 @@ In this work, we investigate quantization-aware training for LLMs (LLM-QAT). In 
 ## Citation
 
 If you find our code useful for your research, please consider citing:
-    
+
+```
   @article{liu2023llm,
-    title={LLM-QAT: Data-Free Quantization Aware Training for Large Language Models},
-    author={Liu, Zechun and Oguz, Barlas and Zhao, Changsheng and Chang, Ernie and Stock, Pierre and Mehdad, Yashar and Shi, Yangyang and Krishnamoorthi, Raghuraman and Chandra, Vikas},
-    journal={arXiv preprint arXiv:2305.17888},
-    year={2023}
+    title   = {LLM-QAT: Data-Free Quantization Aware Training for Large Language Models},
+    author  = { Liu, Zechun and
+                Oguz, Barlas and
+                Zhao, Changsheng and
+                Chang, Ernie and
+                Stock, Pierre and
+                Mehdad, Yashar and
+                Shi, Yangyang and
+                Krishnamoorthi, Raghuraman and
+                Chandra, Vikas},
+    journal = {arXiv preprint arXiv:2305.17888},
+    year    = {2023}
   }
-    
+```    
+
 ## Run
 
 ### 1. Requirements:
@@ -40,7 +50,7 @@ If you find our code useful for your research, please consider citing:
 * Run `bash run_train.sh $w_bit $a_bit $kv_bit` E.g. `bash run_train.sh 4 8 4` for 4-bit weight 8-bit activation and 4-bit kv-cache.
 
 ## Quantized LLaMA-7B Models
-The results reported in the paper is run with the internal LLaMA codebase in Meta. We reproduced our experiments with huggingface codebase and released code here. The results are close to those in the paper. For clearity, we list the zero-shot common sense reasoning accuracy of the opensourced version in the following table.
+The results reported in the paper is run with the internal LLaMA codebase in Meta. We reproduced our experiments with huggingface codebase and released code here. The results are close to those in the paper. For clarity, we list the zero-shot common sense reasoning accuracy of the opensourced version in the following table.
 
 | #bits (W-A-KV) | boolq | piqa | siqa | hellaswag | winogrande | arc_easy | arc_challenge | obqa | avg. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
