@@ -15,18 +15,18 @@ In this work, we investigate quantization-aware training for LLMs (LLM-QAT). In 
 
 If you find our code useful for your research, please consider citing:
 
-```
+```BibTeX
   @article{liu2023llm,
-    title   = {LLM-QAT: Data-Free Quantization Aware Training for Large Language Models},
-    author  = { Liu, Zechun and
-                Oguz, Barlas and
-                Zhao, Changsheng and
-                Chang, Ernie and
-                Stock, Pierre and
-                Mehdad, Yashar and
-                Shi, Yangyang and
-                Krishnamoorthi, Raghuraman and
-                Chandra, Vikas},
+    title  = {LLM-QAT: Data-Free Quantization Aware Training for Large Language Models},
+    author = {Liu, Zechun and
+              Oguz, Barlas and
+              Zhao, Changsheng and
+              Chang, Ernie and
+              Stock, Pierre and
+              Mehdad, Yashar and
+              Shi, Yangyang and
+              Krishnamoorthi, Raghuraman and
+              Chandra, Vikas},
     journal = {arXiv preprint arXiv:2305.17888},
     year    = {2023}
   }
