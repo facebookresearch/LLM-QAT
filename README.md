@@ -58,12 +58,6 @@ The results reported in the paper is run with the internal LLaMA codebase in Met
 
 This code is partially based on HuggingFace transformer repo.
 
-## Relevant Projects
-
-MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases [[Paper](https://arxiv.org/pdf/2402.14905)] [[Code](https://github.com/facebookresearch/MobileLLM)]
-
-SpinQuant: LLM Quantization with Learned Rotations [[Paper](https://arxiv.org/pdf/2405.16406)] [[Code](https://github.com/facebookresearch/SpinQuant)]
-
 ## Contact
 
 Zechun Liu, Reality Labs, Meta Inc (zechunliu at meta dot com)
@@ -71,6 +65,12 @@ Zechun Liu, Reality Labs, Meta Inc (zechunliu at meta dot com)
 Barlas Oguz, Meta AI (barlaso at meta dot com)
 
 Changsheng Zhao, Reality Labs, Meta Inc (cszhao at meta dot com)
+
+## Relevant Projects
+
+MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases [[Paper](https://arxiv.org/pdf/2402.14905)] [[Code](https://github.com/facebookresearch/MobileLLM)]
+
+SpinQuant: LLM Quantization with Learned Rotations [[Paper](https://arxiv.org/pdf/2405.16406)] [[Code](https://github.com/facebookresearch/SpinQuant)]
 
 ## License
 
