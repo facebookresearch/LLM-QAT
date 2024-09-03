@@ -66,6 +66,12 @@ Barlas Oguz, Meta AI (barlaso at meta dot com)
 
 Changsheng Zhao, Reality Labs, Meta Inc (cszhao at meta dot com)
 
+## Relevant Projects
+
+MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases [[Paper](https://arxiv.org/pdf/2402.14905)] [[Code](https://github.com/facebookresearch/MobileLLM)]
+
+SpinQuant: LLM Quantization with Learned Rotations [[Paper](https://arxiv.org/pdf/2405.16406)] [[Code](https://github.com/facebookresearch/SpinQuant)]
+
 ## License
 
 BiT is CC-BY-NC 4.0 licensed as of now.
