@@ -10,6 +10,8 @@ In this work, we investigate quantization-aware training for LLMs (LLM-QAT). In 
 <img width=80% src="./llm_qat_overview.jpg"/>
 </div>
 
+## News
+- Mar 3, 2025: 🚀 We released a new QAT framework: **ParetoQ**, which achieves the state-of-the-art performance on binary/ternary/2-bit/3-bit/4-bit quantization! [[paper](https://arxiv.org/abs/2502.02631)] [[code](https://github.com/facebookresearch/ParetoQ)]
 
 ## Citation
 
